@@ -13,7 +13,7 @@ describe('Testes para a home', () => {
     })
 
     it('Editar contato', () => {
-        cy.get('.edit').click()
+        cy.get('.edit').first().click()
         cy.get('input[type="text"]').type('Arthur Henrique2')
         cy.get('input[type="email"]').type('arthur2@gmail.com')
         cy.get('input[type="tel"]').type('44 9999 8888')
@@ -21,6 +21,6 @@ describe('Testes para a home', () => {
     })
 
     it('Remover contato', () => {
-        cy.get('.delete').click()
+        cy.get('.delete').first().click()
     })
 })
